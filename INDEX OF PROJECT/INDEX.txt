@@ -1,0 +1,17 @@
+CW-B24 PROJECT 
+PROJECT TYPE - E-COMMERCE SITE
+PROJECT NAME- 
+(My name is Sachin kumar and I am the student of MASAI SCHOOL of the batch fw26. My batch ID is fw26_101. This is my first project in the MASAI.)
+Index of the Project-:
+1) Home page
+* Header (nav-bar)
+* Mid Intro
+* Footer
+2) Login / signup page 
+* User login 
+* Admin login
+3) Cart page
+* Add to cart
+* Details of the item
+
+
