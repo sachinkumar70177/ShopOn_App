@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .burger{
+          padding: 10px;
+          cursor: pointer;
+        }
+        .line{
+            width: 30px;
+            background-color: black;
+            height: 3px;
+            margin: 5px 4px;
+        }
+      
+        .nav-list{
+          display: flex;
+         
+        width: 50%;
+        justify-content: space-around;
+        padding: 10px;
+
+     
+        }
+        .navbar{
+        display: flex;
+        justify-content: space-between;
+ padding-top: 10px;
+background-color: rgb(219, 219, 219);
+        }
+        
+       .nav-list>div a{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+       }
+       .nav-list>div a:hover{
+        color: red;
+        text-decoration: underline;
+       }
+       .nav-list>div a input{
+        padding: 5px;
+       text-decoration: underline;
+       text-align: center;
+       border:  none;
+       margin-right: 10px;
+
+
+       }
+        .nav-list>div a input:hover{
+            background-color: antiquewhite;
+            cursor: pointer;
+        }
+    
+       .links a{
+        display: block;
+        margin: 10px;
+        text-decoration: none;
+        color:  black;
+       }
+     
+      .hnav{
+      height: 5px;
+      transform:all 0.7s ease-out ;
+      }
+      .vnav{
+       
+        opacity: 0;
+      }
+      .email{
+        width: 100%;
+        border: none;
+      
+      
+      
+      }
+      .save{
+        width: 100%;
+        padding: 7px;
+        margin: 10px 0px;
+        background-color: black;
+        color: white;
+        margin-top: 200px;
+      }
+      .unsub>button{
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0px;
+        background-color: rgb(218, 214, 214);
+        color: white;
+        border: none;
+      }
+      .logo>img{
+            
+            width: 50%;
+              border-radius:45px ;
+             }
+             .logo{
+        width: 15%;
+        margin-right: 50px;
+       }
+    
+   #mid{
+    width: 40%;
+    margin-left: 200px;
+   }
+    </style>
+</head>
+<body>
+    <nav class="navbar ">
+        <div class="burger hnav">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="links vnav">
+                <a href="">Boy's Wear</a>
+                <a href="">Women's Wear</a>
+                <a href="">Men's Wear</a>
+                <a href="">Beauty</a>
+            
+                </div>
+         </div>
+         <div class="logo">
+
+            <img src="./N.png" alt="Shop on">
+           </div>
+        
+        <div class="nav-list">
+           
+            <div> <a href="#home"><input type="search" placeholder="SEARCH"></a> </div>
+           
+            <div> <a href="#home">HELP</a> </div>
+           
+           
+        </div>
+   
+    </nav>
+    <div id="mid">
+        <h4>NEWSLETTER</h4>
+        <p>Select your interests and receive the latest news and trends each week.</p>
+        <label for="">Email</label>
+        <input type="email" class="email">
+        <hr>
+       <div> <input type="checkbox">
+       <label for="">I accept the privacy statement</label>
+    </div>
+    <h3>SECTIONS</h3>
+    <div><input type="checkbox">
+        <label for="">Woman</label></div>
+    <div><input type="checkbox">
+        <label for="">Man</label></div>
+    <div><input type="checkbox">
+        <label for="">Kids</label></div>
+        <hr>
+        <button class="save">SAVE</button>
+        <div class="unsub"><button>UNSUBSCRIBE</button></div>
+</body>
+<script>
+     let mid=document.getElementById("mid");
+   console.log(mid)
+   let burger=document.querySelector(".burger")
+   console.log(burger)
+   let links=document.querySelector(".links");
+  
+    
+    burger.addEventListener("click",function (){
+burger.classList.toggle("hnav");
+links.classList.toggle("vnav");
+})
+</script>
+</html>
