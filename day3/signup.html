@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header id="header">
+
+        <nav id="navbar">
+ <div class="buger_logo ">
+         <div class="burger hnav">
+            <div  class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="links vnav">
+                <a href="">Boy's Wear</a>
+                <a href="">Women's Wear</a>
+                <a href="">Men's Wear</a>
+                <a href="">Beauty</a>
+            
+                </div>
+         </div>
+
+         <div class="logo">
+           <img src="/foregoing-silver-4856/day2/N (1).png" alt="">
+         </div>
+ </div>
+         <div class="ul_list">
+           
+           <ul>
+            <li><a href="">HELP</a></li>
+            <li><a href="/foregoing-silver-4856/day2/index.html">HOME</a></li>
+           </ul>
+         </div>
+        </nav>
+    </header>
+
+   <div id="form_maker">
+    <h2>SIGN UP TO YOUR ACCOUNT</h2>
+    <hr>
+    <form id="register" method="post"> 
+     <label > First Name : </label>
+     <br>
+     <input type="text" name="fname" id="name" placeholder="Enter Your First Name">
+     <br><br>
+     <label>Last Name : </label>
+     <br>
+     <input type="text" name="lname" id="name" placeholder="Enter Your Last Name ">
+     <br><br>
+     <label >Your Age :</label>
+     <br>
+     <input type="number" name="age" id="name" placeholder="How Old Are You?" >
+     <br><br>
+   
+     <label >Gender</label>
+     <br><br>
+
+     <input type="radio" name="gender" id="male">
+   
+     <span id="male">Male</span>
+   <br><br>
+     <input type="radio" name="gender" id="female">
+     
+ 
+     <span id="female">Female</span>
+     <br><br>
+     <label >Email / Mobile No. :</label>
+     <br>
+     <input type="text" name="email" id="name" placeholder="Enter Email or Number">
+     <br><br>
+    
+     <label >Password :</label>
+     <br>
+     <input type="text" name="text" id="Password" placeholder="Enter Your Password">
+     <br><br>
+     <label >Confirm Password :</label>
+     <br>
+     <input type="text" name="text" id="Password" placeholder="Confirm Password">
+     <br><br>
+     <input type="submit" id="submit">
+   <hr>
+    
+    </form>
+    <a href="/foregoing-silver-4856/day3/login.html">Already have a account? /Go to login page</a>
+    <hr>
+    <p>Password Should Have 4 Char(a to z) , 4 Number and Special character(!,@,# etc)</p>
+    <hr>
+   </div>
+   
+</body>
+<script>
+    let burger=document.querySelector(".burger")
+   console.log(burger)
+   let links=document.querySelector(".links");
+
+   burger.addEventListener("click",function (){
+burger.classList.toggle("hnav");
+links.classList.toggle("vnav");
+})
+
+</script>
+</html>

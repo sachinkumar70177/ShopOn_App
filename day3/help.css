@@ -1,0 +1,132 @@
+
+
+.burger{
+    padding: 10px;
+  }
+ 
+  .line{
+      width: 30px;
+      background-color: rgb(0, 0, 0);
+      height: 3px;
+      margin: 5px 4px;
+  }
+  .line:hover{
+    background-color: black;
+  }
+  .logo>img{
+    opacity: 0.90;
+    width: 20%;
+    border-radius: 40px;
+  }
+  .buger_logo{
+    display: flex;
+  }
+ 
+  .ul_list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+  }
+body{
+  
+    background-image: url(IMAGE-landscape-web-b48ae8d8-610a-4908-a039-f825c5dbf81d-default_0.jpg);
+    background-size:cover;
+   background-repeat: no-repeat;
+  
+}
+   .news a{
+    text-decoration: none;
+    color: black;
+  }
+  .social>span a{
+    display: block;
+  text-decoration: none;
+  color: black;
+  margin: 10px 4px;
+  }
+  .social{
+    width: 30%;
+    margin: auto;
+  display: flex;
+ justify-content: space-evenly;
+flex-wrap: wrap;
+    
+  }
+  #footer{
+   
+    width: 80%;
+    margin: 200px auto ;
+  }
+  .social p{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .imgcheck{
+    width: 80%;
+    margin: auto;
+  }
+  .name{
+    margin: 80px 0px;
+    font-size: 12px;
+   color: rgb(26, 25, 25);
+   width: 40%;
+   font-family: 'Edu NSW ACT Foundation', cursive;
+
+  }
+  .links{
+
+    background-color: rgb(213, 213, 213);
+    border-radius: 20px;
+  }
+  #mid>img{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+  @media only  scree and (max-width: 800px) {
+    .nav-list{
+      display: block;
+     flex-wrap: wrap;
+    }
+  }
+ 
+  .ul_list li {
+    float: right;
+  
+  }
+  
+  .ul_list li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .ul_list li a:hover {
+    color: black;
+    text-decoration-line: underline;
+  }
+  #navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
+  
+  .links a{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color:  rgb(0, 0, 0);
+   }
+   .hnav{
+    height: 10px;
+    transform:all 0.7s ease-out ;
+    }
+    .vnav{
+     opacity: 0;
+    }
+
+
+
+
+ 

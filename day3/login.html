@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header id="header">
+
+        <nav id="navbar">
+ <div class="buger_logo ">
+         <div class="burger hnav">
+            <div  class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="links vnav">
+                <a href="">Boy's Wear</a>
+                <a href="">Women's Wear</a>
+                <a href="">Men's Wear</a>
+                <a href="">Beauty</a>
+            
+                </div>
+         </div>
+
+         <div class="logo">
+           <img src="/foregoing-silver-4856/day2/N (1).png" alt="">
+         </div>
+ </div>
+         <div class="ul_list">
+           
+           <ul>
+            <li><a href="">HELP</a></li>
+            <li><a href="/foregoing-silver-4856/day2/index.html">HOME</a></li>
+           </ul>
+         </div>
+        </nav>
+    </header>
+
+    <div id="form_maker">
+        <h2>LOG IN TO YOUR ACCOUNT</h2>
+        <hr>
+        <p>Enter your Password and Email</p>
+        <hr>
+        <form id="register" method="post"> 
+        
+         <label >Email / Mobile No. :</label>
+         <br>
+         <input type="text" name="email" id="name" placeholder="Enter Email or Number">
+         <br><br>
+        
+         <label >Password :</label>
+         <br>
+         <input type="text" name="text" id="Password" placeholder="Enter Your Password">
+         <br><br>
+        
+        
+         <input type="submit" id="submit">
+       <hr>
+        
+        </form>
+       
+        <a href="/foregoing-silver-4856/day3/signup.html">Go To SignUp Page </a>
+        <p>(If you don't have account)</p>
+        <hr>
+        
+        
+       </div>
+   
+</body>
+<script>
+    let burger=document.querySelector(".burger")
+   console.log(burger)
+   let links=document.querySelector(".links");
+
+   burger.addEventListener("click",function (){
+burger.classList.toggle("hnav");
+links.classList.toggle("vnav");
+})
+
+</script>
+</html>

@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(0, 0, 0,0.05);
+    background-image: url(pngtree-cartoon-red-e-commerce-background-download-picture-image_1119207.jpg);
+   background-size: cover;
+   background-repeat: repeat;
+   background-attachment: scroll;
+  
+}
+.burger{
+    padding: 10px;
+  }
+ 
+  .line{
+      width: 30px;
+      background-color: rgb(255, 255, 255);
+      height: 3px;
+      margin: 5px 4px;
+  }
+  .line:hover{
+    background-color: black;
+  }
+  .logo>img{
+    opacity: 0.90;
+    width: 20%;
+    border-radius: 40px;
+  }
+  .buger_logo{
+    display: flex;
+  }
+ 
+  .ul_list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+ 
+   
+  }
+ 
+  
+  .ul_list li {
+    float: right;
+  
+  }
+  
+  .ul_list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .ul_list li a:hover {
+    color: black;
+    text-decoration-line: underline;
+  }
+  #navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
+  
+  .links a{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color:  rgb(255, 255, 255);
+   }
+   .hnav{
+    height: 10px;
+    transform:all 0.7s ease-out ;
+    }
+    .vnav{
+     opacity: 0;
+    }
+    #form_maker{
+        width: 50%;
+       border: 2px rgb(0, 0, 0) solid;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin: auto;
+     color: rgb(9, 255, 0);
+     border-radius: 20px;
+     opacity: 0.80;
+     font-family: 'Trochut', cursive;
+    }
+    #form_maker>a{
+        text-decoration: none;
+        color:  rgb(9, 255, 0);
+    }
+    #form_maker>a:hover{
+        color: black;
+    }
+    #submit{
+        width: 100%;
+    }
+hr{
+    width: 100%;
+}
+#form_maker{
+    background-color: rgba(82, 0, 0, 0.827);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#form_maker p{
+ text-align: center;
+ margin: 0px 20px;
+ font-family: 'Trochut', cursive;
+}
+#name,#Password,#submit{
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+ 
