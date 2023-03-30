@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <header id="header">
+
+        <nav id="navbar">
+ <div class="buger_logo ">
+         <div class="burger hnav">
+            <div  class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="links vnav">
+                <a href="">Boy's Wear</a>
+                <a href="">Women's Wear</a>
+                <a href="">Men's Wear</a>
+                <a href="">Beauty</a>
+            
+                </div>
+         </div>
+
+         <div class="logo">
+           <img src="/foregoing-silver-4856/day2/N (1).png" alt="">
+         </div>
+ </div>
+         <div class="ul_list">
+           
+           <ul>
+            <li><a href="">HELP</a></li>
+            <li><a href="/foregoing-silver-4856/day2/index.html">HOME</a></li>
+           </ul>
+         </div>
+        </nav>
+    </header>
+    <div class="imgcheck">
+       <h4>HOW CAN WE HELP YOU?</h4>
+       <br>
+       <input type="search" placeholder="SEARCH" id="SEARCH">
+     
+    </div>
+    <footer id="footer">
+        <h4 class="news"><a href="./newsletter.html"> Click On <br> <i style="color: rgb(242, 21, 21);">  JOIN OUR NEWSLETTER</i> <br> To Join NEWSLETTER</a></h>
+        <hr>
+        <h4>Social </h4>
+        <div class="social">
+            <span> <a href="https://www.instagram.com/zara/" target="_blank">INSTAGRAM</a></span>
+            <span> <a href="https://www.facebook.com/Zara" target="_blank">FACEBOOK</a></span>
+            <span> <a href="https://twitter.com/ZARA" target="_blank">TWITTER</a></span>
+            <span> <a href="https://www.pinterest.es/zaraofficial/" target="_blank">PINTEREST</a></span>
+            <span> <a href="https://www.youtube.com/user/zara" target="_blank">YOUTUBE</a></span>
+            <span> <a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv" target="_blank">SPOTIFY</a></span>
+        </div>
+        <hr>
+        <h4>Company</h4>
+        <p class="name">
+            Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.
+            
+            The customer is at the heart of our unique business model, which includes design, production, distribution and sales through our extensive retail network.
+            
+            For more information, please visit the Inditex Group website: www.inditex.com</p>
+            <hr>
+        <p class="name">NAME AND ADDRESS OF THE MANUFACTURER: INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.) AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+        </footer>
+</body>
+<script>
+    let burger=document.querySelector(".burger")
+   console.log(burger)
+   let links=document.querySelector(".links");
+
+   burger.addEventListener("click",function (){
+burger.classList.toggle("hnav");
+links.classList.toggle("vnav");
+})
+
+</script>
+</html>

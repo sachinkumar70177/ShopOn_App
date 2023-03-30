@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
         body{
             margin: 0px;
@@ -21,26 +23,31 @@
         }
       
         .nav-list{
-          display: flex;
+        
          
-        width: 50%;
+      display: flex;
         justify-content: space-around;
         padding: 10px;
 
      
         }
+        .nav-list>div{
+          margin: 0px 20px;
+        }
         .navbar{
+         
         display: flex;
         justify-content: space-between;
  padding-top: 10px;
- box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+ position: fixed;
 
         }
         .logo>img{
             
        width: 50%;
          border-radius:45px ;
-         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        
         }
        .nav-list>div a{
         text-decoration: none;
@@ -51,9 +58,11 @@
         text-decoration: underline;
        }
        .nav-list>div a input{
-        padding: 5px;
+        padding: 5px 0px;
        text-decoration: underline;
+       border-radius: 20px;
        text-align: center;
+       
        border:  none;
        margin-right: 10px;
        }
@@ -72,13 +81,15 @@
         width: 100%;
        }
       .hnav{
-      height: 5px;
+  
       transform:all 0.7s ease-out ;
       }
       .vnav{
-       
+      
         opacity: 0;
+      
       }
+   
       .news a{
         text-decoration: none;
         color: black;
@@ -109,9 +120,22 @@ flex-wrap: wrap;
         font-size: 12px;
        color: rgb(26, 25, 25);
        width: 40%;
+       font-family: 'Edu NSW ACT Foundation', cursive;
+
+      }
+      .links{
+   
+        background-color: rgb(213, 213, 213);
+        border-radius: 20px;
       }
       #mid>img{
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      @media only  scree and (max-width: 800px) {
+        .nav-list{
+          display: block;
+         flex-wrap: wrap;
+        }
       }
     </style>
 </head>
@@ -123,6 +147,7 @@ flex-wrap: wrap;
             <div class="line"></div>
             <div class="line"></div>
             <div class="links vnav">
+              <a href="">Home</a>
                 <a href="">Boy's Wear</a>
                 <a href="">Women's Wear</a>
                 <a href="">Men's Wear</a>
@@ -132,12 +157,12 @@ flex-wrap: wrap;
          </div>
         <div class="logo">
 
-             <img src="./N.png" alt="Shop on">
+             <img src="./N (1).png" alt="Shop on">
             </div>
-        <div class="nav-list">
+        <div class="nav-list ">
            
             <div> <a href="#home"><input type="search" placeholder="SEARCH"></a> </div>
-            <div> <a href="#home">LOG IN</a> </div>
+            <div> <a href="/foregoing-silver-4856/day3/login.html">LOG IN</a> </div>
             <div> <a href="#home">HELP</a> </div>
             <div> <a href="#home">ABOUT</a> </div>
            
@@ -151,8 +176,9 @@ flex-wrap: wrap;
     </div>
 
     <footer id="footer">
-    <h2 class="news"><a href="./newsletter.html">JOIN OUR NEWSLETTER</a></h2>
+    <h4 class="news"><a href="./newsletter.html"> Click On <br> <i style="color: rgb(242, 21, 21);">  JOIN OUR NEWSLETTER</i> <br> To Join NEWSLETTER</a></h>
     <hr>
+    <h4>Social </h4>
     <div class="social">
         <span> <a href="https://www.instagram.com/zara/" target="_blank">INSTAGRAM</a></span>
         <span> <a href="https://www.facebook.com/Zara" target="_blank">FACEBOOK</a></span>
@@ -162,16 +188,15 @@ flex-wrap: wrap;
         <span> <a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv" target="_blank">SPOTIFY</a></span>
     </div>
     <hr>
-    <p><h3>Company</h3>
+    <h4>Company</h4>
+    <p class="name">
         Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.
         
         The customer is at the heart of our unique business model, which includes design, production, distribution and sales through our extensive retail network.
         
         For more information, please visit the Inditex Group website: www.inditex.com</p>
         <hr>
-    <p class="name">NAME AND ADDRESS OF THE MANUFACTURER:
-        INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)
-        AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+    <p class="name">NAME AND ADDRESS OF THE MANUFACTURER: INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.) AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
     </footer>
 </body>
 
