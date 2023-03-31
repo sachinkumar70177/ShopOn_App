@@ -9,37 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header id="header">
-
-        <nav id="navbar">
- <div class="buger_logo ">
-         <div class="burger hnav">
-            <div  class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="links vnav">
-                <a href="">Boy's Wear</a>
-                <a href="">Women's Wear</a>
-                <a href="">Men's Wear</a>
-                <a href="">Beauty</a>
+   
+    <div class="menu_bar">
+        
+        <a href="" class="logodec"> <h1 class="logo">
+            <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+        
+         <ul>
+            <li><a href="">Home  <i class="fas fa-caret-down"></i></a>
             
-                </div>
-         </div>
-
-         <div class="logo">
-           <img src="/foregoing-silver-4856/day2/N (1).png" alt="">
-         </div>
- </div>
-         <div class="ul_list">
-           
-           <ul>
-            <li><a href="">HELP</a></li>
-            <li><a href="/foregoing-silver-4856/day2/index.html">HOME</a></li>
-           </ul>
-         </div>
-        </nav>
-    </header>
-
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="">Boy's Wear</a></li>
+                    <li><a href="">Men's Wear</a></li>
+                    <li><a href="">Women's wear</a></li>
+                    <li><a href="">Beauty</a></li>
+                </ul>
+            </div>
+            
+            </li>
+            <li><a href="">Log In</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Help</a></li>
+         </ul>
+        </div>
+   
    <div id="form_maker">
     <h2>SIGN UP TO YOUR ACCOUNT</h2>
     <hr>
@@ -55,15 +49,15 @@
      <label >Your Age :</label>
      <br>
      <input type="number" name="age" id="name" placeholder="How Old Are You?" >
-     <br><br>
+     <br>
    
      <label >Gender</label>
-     <br><br>
+     <br>
 
      <input type="radio" name="gender" id="male">
    
      <span id="male">Male</span>
-   <br><br>
+   <br>
      <input type="radio" name="gender" id="female">
      
  
@@ -98,7 +92,8 @@
    console.log(burger)
    let links=document.querySelector(".links");
 
-   burger.addEventListener("click",function (){
+   burger.addEventListener("click",function (e){
+    e.preventDefault();
 burger.classList.toggle("hnav");
 links.classList.toggle("vnav");
 })

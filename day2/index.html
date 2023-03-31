@@ -5,205 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
-        .burger{
-          padding: 10px;
-        }
-        .line{
-            width: 30px;
-            background-color: black;
-            height: 3px;
-            margin: 5px 4px;
-        }
-      
-        .nav-list{
-        
-         
-      display: flex;
-        justify-content: space-around;
-        padding: 10px;
-
-     
-        }
-        .nav-list>div{
-          margin: 0px 20px;
-        }
-        .navbar{
-         
-        display: flex;
-        justify-content: space-between;
- padding-top: 10px;
-
- position: fixed;
-
-        }
-        .logo>img{
-            
-       width: 50%;
-         border-radius:45px ;
-        
-        }
-       .nav-list>div a{
-        text-decoration: none;
-        color: black;
-       }
-       .nav-list>div a:hover{
-        color: red;
-        text-decoration: underline;
-       }
-       .nav-list>div a input{
-        padding: 5px 0px;
-       text-decoration: underline;
-       border-radius: 20px;
-       text-align: center;
-       
-       border:  none;
-       margin-right: 10px;
-       }
-       .logo{
-        width: 15%;
-        margin-right: 50px;
-       }
-    
-       .links a{
-        display: block;
-        margin: 10px;
-        text-decoration: none;
-        color:  black;
-       }
-       #mid img{
-        width: 100%;
-       }
-      .hnav{
-  
-      transform:all 0.7s ease-out ;
-      }
-      .vnav{
-      
-        opacity: 0;
-      
-      }
-   
-      .news a{
-        text-decoration: none;
-        color: black;
-      }
-      .social>span a{
-        display: block;
-      text-decoration: none;
-      color: black;
-      margin: 10px 4px;
-      }
-      .social{
-        width: 30%;
-        margin: auto;
-      display: flex;
-     justify-content: space-evenly;
-flex-wrap: wrap;
-        
-      }
-      #footer{
-        width: 80%;
-        margin: auto;
-      }
-      .social p{
-        font-family: 'Courier New', Courier, monospace;
-      }
-      .name{
-        margin: 80px 0px;
-        font-size: 12px;
-       color: rgb(26, 25, 25);
-       width: 40%;
-       font-family: 'Edu NSW ACT Foundation', cursive;
-
-      }
-      .links{
-   
-        background-color: rgb(213, 213, 213);
-        border-radius: 20px;
-      }
-      #mid>img{
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-      }
-      @media only  scree and (max-width: 800px) {
-        .nav-list{
-          display: block;
-         flex-wrap: wrap;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   
-    <nav class="navbar ">
-        <div class="burger hnav">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="links vnav">
-              <a href="">Home</a>
-                <a href="">Boy's Wear</a>
-                <a href="">Women's Wear</a>
-                <a href="">Men's Wear</a>
-                <a href="">Beauty</a>
-            
-                </div>
-         </div>
-        <div class="logo">
-
-             <img src="./N (1).png" alt="Shop on">
-            </div>
-        <div class="nav-list ">
-           
-            <div> <a href="#home"><input type="search" placeholder="SEARCH"></a> </div>
-            <div> <a href="/foregoing-silver-4856/day3/login.html">LOG IN</a> </div>
-            <div> <a href="#home">HELP</a> </div>
-            <div> <a href="#home">ABOUT</a> </div>
-           
+    <div class="menu_bar">
+        
+    <a href="" class="logodec"> <h1 class="logo">
+        <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+     <input type="search" placeholder="SEARCH" id="search">
+     <ul>
+        <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
+        
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="">Boy's Wear</a></li>
+                <li><a href="">Men's Wear</a></li>
+                <li><a href="">Women's wear</a></li>
+                <li><a href="">Beauty</a></li>
+            </ul>
         </div>
-   
-    </nav>
-   
-
-    <div id="mid" >
-    
+        
+        </li>
+        <li><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+        <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
+        <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
+     </ul>
     </div>
 
+    <div id="mid">
+
+    </div>
     <footer id="footer">
-    <h4 class="news"><a href="./newsletter.html"> Click On <br> <i style="color: rgb(242, 21, 21);">  JOIN OUR NEWSLETTER</i> <br> To Join NEWSLETTER</a></h>
-    <hr>
-    <h4>Social </h4>
-    <div class="social">
-        <span> <a href="https://www.instagram.com/zara/" target="_blank">INSTAGRAM</a></span>
-        <span> <a href="https://www.facebook.com/Zara" target="_blank">FACEBOOK</a></span>
-        <span> <a href="https://twitter.com/ZARA" target="_blank">TWITTER</a></span>
-        <span> <a href="https://www.pinterest.es/zaraofficial/" target="_blank">PINTEREST</a></span>
-        <span> <a href="https://www.youtube.com/user/zara" target="_blank">YOUTUBE</a></span>
-        <span> <a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv" target="_blank">SPOTIFY</a></span>
-    </div>
-    <hr>
-    <h4>Company</h4>
-    <p class="name">
-        Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.
-        
-        The customer is at the heart of our unique business model, which includes design, production, distribution and sales through our extensive retail network.
-        
-        For more information, please visit the Inditex Group website: www.inditex.com</p>
+        <h4 class="news"><a href="./newsletter.html"> Click On <br> <i style="color: rgb(242, 21, 21);">  JOIN OUR NEWSLETTER</i> <br> To Join NEWSLETTER</a></h>
         <hr>
-    <p class="name">NAME AND ADDRESS OF THE MANUFACTURER: INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.) AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
-    </footer>
+        <h4>Social </h4>
+        <div class="social">
+            <span> <a href="https://www.instagram.com/zara/" target="_blank">INSTAGRAM</a></span>
+            <span> <a href="https://www.facebook.com/Zara" target="_blank">FACEBOOK</a></span>
+            <span> <a href="https://twitter.com/ZARA" target="_blank">TWITTER</a></span>
+            <span> <a href="https://www.pinterest.es/zaraofficial/" target="_blank">PINTEREST</a></span>
+            <span> <a href="https://www.youtube.com/user/zara" target="_blank">YOUTUBE</a></span>
+            <span> <a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv" target="_blank">SPOTIFY</a></span>
+        </div>
+        <hr>
+        <h4>Company</h4>
+        <p class="name">
+            Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.
+            
+            The customer is at the heart of our unique business model, which includes design, production, distribution and sales through our extensive retail network.
+            
+            For more information, please visit the Inditex Group website: www.inditex.com</p>
+            <hr>
+        <p class="name">NAME AND ADDRESS OF THE MANUFACTURER: INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.) AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+        </footer>
+
 </body>
-
-
 <script>
-
-
     let arr=["https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-girl/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-453b48a8-9ccd-415a-bf4f-e23a25e383f3-default_0.jpg?ts=1679665278404","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-boy/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-73e579a1-15c7-4045-a7f7-319249864f22-default_0.jpg?ts=1680022991851","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-boy/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-73e579a1-15c7-4045-a7f7-319249864f22-default_0.jpg?ts=1680022991851","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-babyboy/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-e15a8fab-a9fa-4f26-ab62-9b687cc164fb-default_0.jpg?ts=1680020119939","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-mini/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-148d7fa2-99d8-445b-95b0-610b2808c96e-default_0.jpg?ts=1680020452598","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-swimwear/subhome-xmedia-13//w/1920/IMAGE-landscape-default-fill-39271c3c-50b4-45fe-bc5c-ee728f6e9b42-default_0.jpg?ts=1679665211759","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-shoes-bags/subhome-xmedia-12//w/1920/IMAGE-landscape-default-fill-8c6abfe7-8032-4066-8ea1-0b31338a438c-default_0.jpg?ts=1679567270157","https://static.zara.net/photos///contents/mkt/spots/ss23-north-kids-join-life/subhome-xmedia-11//w/1920/IMAGE-landscape-default-fill-bba2e1b6-f02b-4e3b-83e7-0be62c296503-default_0.jpg?ts=1679059903730"]
     console.log(arr.length);
    
@@ -237,14 +95,5 @@ flex-wrap: wrap;
   
 }
 slideshowFun(arr);
-
-burger.addEventListener("click",function (){
-burger.classList.toggle("hnav");
-links.classList.toggle("vnav");
-})
-  
-
-
-
 </script>
 </html>

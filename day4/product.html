@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <div class="menu_bar">
+        
+        <a href="" class="logodec"> <h1 class="logo">
+            <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+         <input type="search" placeholder="SEARCH" id="search">
+         <ul>
+            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
+            
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="./cart.html">Boy's Wear</a></li>
+                    <li><a href="./cart.html">Men's Wear</a></li>
+                    <li><a href="./cart.html">Women's wear</a></li>
+                    <li><a href="./cart.html">Beauty</a></li>
+                </ul>
+            </div>
+            
+            </li>
+            <li><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+            <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
+            <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
+         
+         </ul>
+        </div>
+   
+<select id="filtered">
+    <option value="">select categoey</option>
+    <option value="men's clothing">men's clothing</option>
+    <option value="jewelery">jewelery</option>
+    <option value="electronics">electronics</option>
+</select>
+<select  id="sort">
+    <option value="">sort by price</option>
+    <option value="lth">low to high</option>
+    <option value="htl">high to low</option>
+</select>
+
+
+    <div id="main"></div>
+</body>
+
+
+<script>
+     let hello=document.getElementById("filtered");
+    let sort=document.getElementById("sort");
+        let search=document.getElementById("search");
+      let main=document.getElementById("main");
+    let lsdata=JSON.parse(localStorage.getItem("sachin"))|| [];
+
+    search.addEventListener("input",function (){
+        console.log(search.value)
+        
+    let filterdata=lsdata.filter((el)=>{
+        if(el.title.toUpperCase().includes(search.value.toUpperCase())==true){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+  
+    display(filterdata)
+})
+
+hello.addEventListener("change",function (){
+    if(hello.value==""){
+        display(lsdata)
+    }
+    else{
+        let filterr= lsdata.filter((el)=>{
+    if(el.category==hello.value){
+        return true;
+    }
+    else{
+        return false;
+    }
+   })
+   display(filterr)
+ 
+    }
+})
+
+
+sort.addEventListener("change",function(){
+
+if(sort.value=="lth"){
+ let sorted=[...lsdata]
+ sorted.sort((a,b)=>{
+ return a.price-b.price;
+    })
+      display(sorted)
+   }
+  else if(sort.value=="htl"){
+ let red=[...lsdata]
+red.sort((a,b)=>{
+ return b.price-a.price;
+})
+display(red)
+}
+else if(sort.value==""){
+ 
+ display(lsdata)
+}
+
+})
+
+
+
+
+display(lsdata)
+
+
+
+    function display(data){
+    main.innerHTML=""
+    data.forEach((el,ind) => {
+        
+     let div=document.createElement("div");
+     let img=document.createElement("img");
+     let tittle=document.createElement("h2");
+     let description=document.createElement("p");
+     let price=document.createElement("h4");
+     let category=document.createElement("p");
+     let add=document.createElement("button");
+        let span=document.createElement("span");
+        let minus=document.createElement("button");
+        let remove=document.createElement("button");
+
+    
+
+img.src=el.image;
+tittle.innerText=el.title;
+description.innerText=el.description;
+price.innerText=`$${+el.price*el.quantity}`
+category.innerText=el.category;
+add.innerText="+"
+
+minus.innerText="-";
+remove.innerText="Remove";
+span.innerText=el.quantity;
+
+remove.addEventListener("click" , function (){
+data.splice(ind,1);
+localStorage.setItem("sachin",JSON.stringify(data))
+display(data)
+})
+
+
+add.addEventListener("click" , function (){
+  el.quantity++;
+  localStorage.setItem("sachin",JSON.stringify(data))
+display(data)
+})
+
+
+minus.addEventListener("click" , function (){
+  if(el.quantity>1){
+    el.quantity--;
+  localStorage.setItem("sachin",JSON.stringify(data))
+display(data)
+
+  }
+ 
+})
+
+
+
+     main.append(div);
+     div.append(img,tittle,description,price,category,add,span,minus,remove);
+    
+   
+
+     
+    });
+
+ 
+  }
+
+  
+
+
+
+</script>
+</html>

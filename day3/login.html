@@ -8,36 +8,30 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header id="header">
-
-        <nav id="navbar">
- <div class="buger_logo ">
-         <div class="burger hnav">
-            <div  class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="links vnav">
-                <a href="">Boy's Wear</a>
-                <a href="">Women's Wear</a>
-                <a href="">Men's Wear</a>
-                <a href="">Beauty</a>
+   
+    <div class="menu_bar">
+        
+        <a href="" class="logodec"> <h1 class="logo">
+            <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+        
+         <ul>
+            <li><a href="">Home  <i class="fas fa-caret-down"></i></a>
             
-                </div>
-         </div>
-
-         <div class="logo">
-           <img src="/foregoing-silver-4856/day2/N (1).png" alt="">
-         </div>
- </div>
-         <div class="ul_list">
-           
-           <ul>
-            <li><a href="">HELP</a></li>
-            <li><a href="/foregoing-silver-4856/day2/index.html">HOME</a></li>
-           </ul>
-         </div>
-        </nav>
-    </header>
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="">Boy's Wear</a></li>
+                    <li><a href="">Men's Wear</a></li>
+                    <li><a href="">Women's wear</a></li>
+                    <li><a href="">Beauty</a></li>
+                </ul>
+            </div>
+            
+            </li>
+            <li><a href="">Log In</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Help</a></li>
+         </ul>
+        </div>
 
     <div id="form_maker">
         <h2>LOG IN TO YOUR ACCOUNT</h2>
@@ -45,7 +39,7 @@
         <p>Enter your Password and Email</p>
         <hr>
         <form id="register" method="post"> 
-        
+          <br>
          <label >Email / Mobile No. :</label>
          <br>
          <input type="text" name="email" id="name" placeholder="Enter Email or Number">
@@ -71,14 +65,7 @@
    
 </body>
 <script>
-    let burger=document.querySelector(".burger")
-   console.log(burger)
-   let links=document.querySelector(".links");
-
-   burger.addEventListener("click",function (){
-burger.classList.toggle("hnav");
-links.classList.toggle("vnav");
-})
+   
 
 </script>
 </html>

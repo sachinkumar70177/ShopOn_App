@@ -1,45 +1,127 @@
+:root{
+  --color-primary: #0073ff;
+  --color-white: #ffffff;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-
-.burger{
-    padding: 10px;
-  }
- 
-  .line{
-      width: 30px;
-      background-color: rgb(0, 0, 0);
-      height: 3px;
-      margin: 5px 4px;
-  }
-  .line:hover{
-    background-color: black;
-  }
-  .logo>img{
-    opacity: 0.90;
-    width: 20%;
-    border-radius: 40px;
-  }
-  .buger_logo{
-    display: flex;
-  }
- 
-  .ul_list ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-   
-  }
+}
 body{
-  
-    background-image: url(IMAGE-landscape-web-b48ae8d8-610a-4908-a039-f825c5dbf81d-default_0.jpg);
-    background-size:cover;
-   background-repeat: no-repeat;
+  font-family: sans-serif;
+ 
+ background-image: url(network-mesh-wire-digital-technology-background_1017-27428.avif);
+  /* background-repeat: repeat; */
+  background-size: cover;
+ 
+}
+.menu_bar{
+
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+
+}
+.logo{
+  color: var(--color-primary);
+  font-size: 30px
+
+}
+.logo span{
+  color: var(--color-black);
+
+}
+.p{
+  font-size: 16px;
+  color:var(--color-primary);
+}
+
+.menu_bar ul{
+  list-style: none;
+ display: flex;
+}
+.menu_bar ul li{
+  padding: 10px 30px;
+  position: relative;
   
 }
-   .news a{
+.menu_bar ul li a{
+color: var(--color-black);
+  text-decoration: none;
+  font-size: 20px;
+  transform: all 0.3s ;
+}
+.menu_bar ul li a:hover{
+  color: var(--color-primary);
+      
+  }
+  .dropdown_menu{
+      display: none;
+    
+  }
+  .dropdown_menu ul li a{
+      color: black;
+  }
+  .menu_bar ul li:hover .dropdown_menu{
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: var(--color-white);
+      
+
+  }
+  .menu_bar ul li:hover .dropdown_menu ul{
+      display: block;
+      margin: 10px;
+  }
+  .menu_bar ul li:hover .dropdown_menu ul li{
+      width: 150px;
+      padding: 10px;
+  }
+  .logodec{
+      text-decoration: none;
+  }
+#SEARCH{
+  width: 80%;
+display: block;
+margin: auto;
+  padding: 8px;
+  text-align: center;
+  font-size: large;
+  border-radius: 10px;
+  border: none;
+}
+
+.imgcheck{
+  width: 80%;
+  margin: auto;
+}
+.imgcheck h4{
+margin-top: 100px;
+text-align: center;
+}
+.imgcheck hr{
+  width: 80%;
+  margin: auto;
+}
+
+   .news>a{
     text-decoration: none;
     color: black;
   }
+  .news>a:hover{
+    color: black;
+    font-size:  17px;
+    font-weight: 700;
+  }
+
   .social>span a{
     display: block;
   text-decoration: none;
@@ -62,10 +144,7 @@ flex-wrap: wrap;
   .social p{
     font-family: 'Courier New', Courier, monospace;
   }
-  .imgcheck{
-    width: 80%;
-    margin: auto;
-  }
+  
   .name{
     margin: 80px 0px;
     font-size: 12px;
@@ -74,57 +153,13 @@ flex-wrap: wrap;
    font-family: 'Edu NSW ACT Foundation', cursive;
 
   }
-  .links{
-
-    background-color: rgb(213, 213, 213);
-    border-radius: 20px;
-  }
-  #mid>img{
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  }
-  @media only  scree and (max-width: 800px) {
-    .nav-list{
-      display: block;
-     flex-wrap: wrap;
-    }
-  }
+  
  
-  .ul_list li {
-    float: right;
+ 
+ 
   
-  }
-  
-  .ul_list li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
-  
-  .ul_list li a:hover {
-    color: black;
-    text-decoration-line: underline;
-  }
-  #navbar{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 20px;
-  }
-  
-  .links a{
-    display: block;
-    margin: 10px;
-    text-decoration: none;
-    color:  rgb(0, 0, 0);
-   }
-   .hnav{
-    height: 10px;
-    transform:all 0.7s ease-out ;
-    }
-    .vnav{
-     opacity: 0;
-    }
+ 
+    
 
 
 
