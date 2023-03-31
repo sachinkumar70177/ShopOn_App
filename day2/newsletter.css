@@ -12,9 +12,14 @@
 }
 body{
     font-family: sans-serif;
+   
+    background-image: url(network-mesh-wire-digital-technology-background_1017-27428.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
 }
 .menu_bar{
-  position: fixed;
+
     height: 80px;
     width: 100%;
     display: flex;
@@ -24,7 +29,7 @@ body{
 
 }
 .logo{
-    color: var(--color-white);
+    color: var(--color-primary);
     font-size: 30px
 
 }
@@ -34,7 +39,7 @@ body{
 }
 .p{
     font-size: 16px;
-    color:var(--color-white);
+    color:var(--color-primary);
 }
 
  .menu_bar ul{
@@ -47,7 +52,7 @@ body{
     
 }
 .menu_bar ul li a{
-color: var(--color-white);
+color: var(--color-black);
     text-decoration: none;
     font-size: 20px;
     transform: all 0.3s ;
@@ -90,44 +95,52 @@ color: var(--color-white);
     border-radius: 10px;
     border: none;
   }
-  .news a{
-    text-decoration: none;
-    color: black;
-  }
-  .social>span a{
-    display: block;
-  text-decoration: none;
-  color: black;
-  margin: 10px 4px;
-  }
-  .social{
-    width: 30%;
+  #mid{
+         
+    font-family: 'Trochut', cursive;
+    display: flex;
+  
+    flex-direction: column;
+    width: 40%;
     margin: auto;
-  display: flex;
- justify-content: space-evenly;
-flex-wrap: wrap;
-    
-  }
-  #footer{
-    width: 80%;
-    margin: auto;
-  }
-  .social p{
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .name{
-    margin: 80px 0px;
-    font-size: 12px;
-   color: rgb(26, 25, 25);
-   width: 40%;
-   font-family: 'Edu NSW ACT Foundation', cursive;
+    padding: 40px;
+    background-color: #c5e7ff05;
 
+   }
+   .email{
+   
+    border: none;
+    border-radius: 20px;
+  
+  
+  
   }
-  .links{
+  .save{
 
-    background-color: rgb(213, 213, 213);
+    padding: 7px;
+    margin: 10px 0px;
+    background-color: black;
+    color: white;
+    margin-top: 100px;
     border-radius: 20px;
   }
-  #mid>img{
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  .unsub{
+ 
+    padding: 8px;
+    margin: 10px 0px;
+   
+    background-color: #0073ff;
+    border: none;
+    border-radius: 20px;
   }
+
+
+#mid{
+
+
+color:  rgb(14, 0, 105);
+}
+.email{
+padding: 5px;
+text-align: center;
+}

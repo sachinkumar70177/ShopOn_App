@@ -5,213 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        body{
-          background-image: url(/foregoing-silver-4856/day3/pngtree-cartoon-red-e-commerce-background-download-picture-image_1119207.jpg);
-            margin: 0px;
-            padding: 0px;
-            
-        }
-        #mid{
-         
-         font-family: 'Trochut', cursive;
-         display: flex;
-         border: 2px red solid;
-         flex-direction: column;
-         width: 40%;
-         margin: auto;
-         padding: 40px;
-         background-color: rgba(82, 0, 0, 0.827);
-       ;
-        }
-        #footer{
-
-        }
-        .burger{
-          padding: 10px;
-          cursor: pointer;
-        }
-        .line{
-            width: 30px;
-            background-color: rgb(255, 255, 255);
-            height: 3px;
-            margin: 5px 4px;
-            color: white;
-        }
-      
-        .nav-list{
-          display: flex;
-         
-        width: 50%;
-        justify-content: space-around;
-        padding: 10px;
-        color:greenyellow;
-     
-        }
-        .navbar{
-        display: flex;
-        justify-content: space-between;
- padding-top: 10px;
- color: white;
-
-
-        }
-        
-       .nav-list>div a{
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        color: white;
-       }
-       .nav-list>div a:hover{
-        color: red;
-        text-decoration: underline;
-       }
-       .nav-list>div a input{
-        padding: 5px;
-       text-decoration: underline;
-       text-align: center;
-       border:  none;
-       margin-right: 10px;
-
-
-       }
-        .nav-list>div a input:hover{
-            background-color: antiquewhite;
-            cursor: pointer;
-        }
-    
-       .links a{
-        display: block;
-        margin: 10px;
-        text-decoration: none;
-        color:  black;
-       }
-     
-      .hnav{
-      height: 5px;
-      transform:all 0.7s ease-out ;
-      }
-      .vnav{
-       
-        opacity: 0;
-      }
-      .email{
-   
-        border: none;
-        border-radius: 20px;
-      
-      
-      
-      }
-      .save{
-   
-        padding: 7px;
-        margin: 10px 0px;
-        background-color: black;
-        color: white;
-        margin-top: 200px;
-        border-radius: 20px;
-      }
-      .unsub{
-     
-        padding: 8px;
-        margin: 10px 0px;
-       
-     
-        border: none;
-        border-radius: 20px;
-      }
-      .logo>img{
-            
-            width: 50%;
-              border-radius:45px ;
-             }
-             .logo{
-        width: 15%;
-        margin-right: 50px;
-       }
-    
-   #mid{
+   <link rel="stylesheet" href="newsletter.css">
  
-  
-    color:  rgb(9, 255, 0);
-   }
-   .email{
-    padding: 5px;
-    text-align: center;
-   }
-   
-    </style>
 </head>
 <body>
-    <nav class="navbar ">
-        <div class="burger hnav">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="links vnav">
-                <a href="">Boy's Wear</a>
-                <a href="">Women's Wear</a>
-                <a href="">Men's Wear</a>
-                <a href="">Beauty</a>
-            
-                </div>
-         </div>
-         <div class="logo">
-
-            <img src="./N (1).png" alt="Shop on">
-           </div>
+ <div class="menu_bar">
         
-        <div class="nav-list">
-           
-            <div> <a href="#home"><input type="search" placeholder="SEARCH"></a> </div>
-           
-            <div> <a href="#home">HELP</a> </div>
-           
-           
+    <a href="" class="logodec"> <h1 class="logo">
+        <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+    
+     <ul>
+        <li><a href="">Home  <i class="fas fa-caret-down"></i></a>
+        
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="">Boy's Wear</a></li>
+                <li><a href="">Men's Wear</a></li>
+                <li><a href="">Women's wear</a></li>
+                <li><a href="">Beauty</a></li>
+            </ul>
         </div>
-   
-    </nav>
-   <footer id="footer">
+        
+        </li>
+        <li><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+        <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
+        <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
+     </ul>
+    </div>
+
+    <footer id="footer">
 
  
 
-    <div id="mid">
-        <h4>NEWSLETTER</h4>
-        <p>Select your interests and receive the latest news and trends each week.</p>
-        <label for="">Email</label>
-        <input type="email" class="email" placeholder="Enter Your Email">
-     
-       <div> <input type="checkbox">
-       <label for="">I accept the privacy statement</label>
-    </div>
-    <h3>SECTIONS</h3>
-    <div><input type="checkbox">
-        <label for="">Woman</label></div>
-    <div><input type="checkbox">
-        <label for="">Man</label></div>
-    <div><input type="checkbox">
-        <label for="">Kids</label></div>
-        <hr>
-        <button class="save">SAVE</button>
-        <br>
-     <button class="unsub">UNSUBSCRIBE</button>
+        <div id="mid">
+            <h4>NEWSLETTER</h4>
+            <p>Select your interests and receive the latest news and trends each week.</p>
+            <label for="">Email</label>
+            <input type="email" class="email" placeholder="Enter Your Email">
+         
+           <div> <input type="checkbox">
+           <label for="">I accept the privacy statement</label>
         </div>
-      </footer>
+        <h3>SECTIONS</h3>
+        <div><input type="checkbox">
+            <label for="">Woman</label></div>
+        <div><input type="checkbox">
+            <label for="">Man</label></div>
+        <div><input type="checkbox">
+            <label for="">Kids</label></div>
+            <hr>
+            <button class="save">SAVE</button>
+            <br>
+         <button class="unsub">UNSUBSCRIBE</button>
+            </div>
+          </footer>
 </body>
 <script>
-     let mid=document.getElementById("mid");
-   console.log(mid)
-   let burger=document.querySelector(".burger")
-   console.log(burger)
-   let links=document.querySelector(".links");
-  
-    
-    burger.addEventListener("click",function (){
-burger.classList.toggle("hnav");
-links.classList.toggle("vnav");
-})
+     
 </script>
 </html>

@@ -12,16 +12,38 @@
 }
 body{
     font-family: sans-serif;
+padding-top: 80px;
 }
+
+#filtered{
+    position: fixed;
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+    left: 5%;
+     margin-top: 10px;
+}
+ #sort{
+    position: fixed;
+    right: 5%;
+    margin-top: 10px;
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+ }
+
 .menu_bar{
   position: fixed;
+  top: 0;
     height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-
+    background-color: #141d28;
+   
+  
 }
 .logo{
     color: var(--color-white);
@@ -29,7 +51,7 @@ body{
 
 }
 .logo span{
-    color: var(--color-black);
+    color: var(--color-primary);
 
 }
 .p{
@@ -90,44 +112,63 @@ color: var(--color-white);
     border-radius: 10px;
     border: none;
   }
-  .news a{
-    text-decoration: none;
-    color: black;
-  }
-  .social>span a{
-    display: block;
-  text-decoration: none;
-  color: black;
-  margin: 10px 4px;
-  }
-  .social{
-    width: 30%;
+
+  #main{
+   
+    width: 70%;
     margin: auto;
-  display: flex;
- justify-content: space-evenly;
-flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+     gap: 20px;
+}
+img{
+    width: 100%;
+}
+#main>div{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 30px;
+}
+#main>div p,#main>div h2,#main>div h4,#main>div img{
+    /* padding: 30px; */
+    text-align: center;
+    padding-bottom: 10px;
     
-  }
-  #footer{
-    width: 80%;
+}
+#main>div button{
+    display: block;
     margin: auto;
-  }
-  .social p{
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .name{
-    margin: 80px 0px;
-    font-size: 12px;
-   color: rgb(26, 25, 25);
-   width: 40%;
-   font-family: 'Edu NSW ACT Foundation', cursive;
+}
 
-  }
-  .links{
-
-    background-color: rgb(213, 213, 213);
+@media only screen and (max-width: 1000px) {
+    #main{
+        
+      width: 40%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+    }
+    #sort{
+        position: fixed;
+      right: 0%;
+     
+        margin-top: 250px;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 20px;
+     }
+     
+#filtered{
+    position: fixed;
+    display: block;
+    padding: 10px;
     border-radius: 20px;
-  }
-  #mid>img{
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  }
+    left: 0%;
+     margin-top: 250px;
+}
+    .menu_bar{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+}
