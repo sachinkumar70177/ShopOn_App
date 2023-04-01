@@ -128,6 +128,40 @@ color: var(--color-black);
     background-color: #e1e1e1;
     font-weight: 700;
 }
+#fname{
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    background-color: #e1e1e1;
+    font-weight: 700;
+}
+#age{
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    background-color: #e1e1e1;
+    font-weight: 700;
+
+}
+#Name{
+    
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    background-color: #e1e1e1;
+    font-weight: 700;
+}
+#Password1{
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    background-color: #e1e1e1;
+    font-weight: 700;
+}
 #submit{
 width: 100%;
 padding: 8px;
@@ -158,6 +192,10 @@ margin: 10px 0px;
 }
 #form_maker label{
     font-weight: 600;
+}
+#checkagain{
+   color: red;
+   transition: color 4s ease-out;
 }
 
 

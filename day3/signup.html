@@ -28,7 +28,8 @@
             </div>
             
             </li>
-            <li><a href="">Log In</a></li>
+            <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+            <li id="profile" style="display: none;"><a href="#">Profile</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Help</a></li>
          </ul>
@@ -37,10 +38,10 @@
    <div id="form_maker">
     <h2>SIGN UP TO YOUR ACCOUNT</h2>
     <hr>
-    <form id="register" method="post"> 
+<form id="register" method="post">    
      <label > First Name : </label>
      <br>
-     <input type="text" name="fname" id="name" placeholder="Enter Your First Name">
+     <input type="text" name="fname" id="fname" placeholder="Enter Your First Name">
      <br><br>
      <label>Last Name : </label>
      <br>
@@ -48,7 +49,7 @@
      <br><br>
      <label >Your Age :</label>
      <br>
-     <input type="number" name="age" id="name" placeholder="How Old Are You?" >
+     <input type="number" name="age" id="age" placeholder="How Old Are You?" >
      <br>
    
      <label >Gender</label>
@@ -65,16 +66,16 @@
      <br><br>
      <label >Email / Mobile No. :</label>
      <br>
-     <input type="text" name="email" id="name" placeholder="Enter Email or Number">
+     <input type="text" name="email" id="Name" placeholder="Enter Email or Number">
      <br><br>
     
-     <label >Password :</label>
+     <label  >Password : <span id="check"></span></label>
      <br>
      <input type="text" name="text" id="Password" placeholder="Enter Your Password">
      <br><br>
-     <label >Confirm Password :</label>
+     <label >Confirm Password : <span id="checkagain"></span></label>
      <br>
-     <input type="text" name="text" id="Password" placeholder="Confirm Password">
+     <input type="text" name="text" id="Password1" placeholder="Confirm Password">
      <br><br>
      <input type="submit" id="submit">
    <hr>
@@ -88,15 +89,60 @@
    
 </body>
 <script>
-    let burger=document.querySelector(".burger")
-   console.log(burger)
-   let links=document.querySelector(".links");
+let name=document.getElementById("Name");
+let password=document.getElementById("Password")
+let confirmpassword=document.getElementById("Password1");
+ let form=document.querySelector("form");
+ let check=document.getElementById("check")
+let checkagain=document.getElementById("checkagain")
+let fname=document.getElementById("fname");
+let age=document.getElementById("age");
+ 
+let data=JSON.parse(localStorage.getItem("signupinfo")) || [];
+function display(signupinformation){
+    
 
-   burger.addEventListener("click",function (e){
+form.addEventListener("submit",function (e){
+   
+    
     e.preventDefault();
-burger.classList.toggle("hnav");
-links.classList.toggle("vnav");
+  
+    if(password.value==confirmpassword.value){
+       
+       let obj={
+        fname:fname.value,
+        age:age.value,
+        email:name.value,
+        password:password.value,
+       }
+       signupinformation.push(obj);
+        console.log(signupinformation)
+        
+       localStorage.setItem("signupinfo",JSON.stringify(signupinformation));
+       setTimeout(() => {
+        window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day3/login.html"
+       }, 2000);
+      
+     
+    }
+    else{
+        checkagain.innerText="Enter same password"
+        setTimeout(() => {
+            checkagain.innerText=""
+        }, 3000);
+     
+    }
+    console.log(signupinformation)
 })
+}
+
+
+
+
+
+display(data)
+
+
 
 </script>
 </html>

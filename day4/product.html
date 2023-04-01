@@ -27,7 +27,8 @@
             </div>
             
             </li>
-            <li><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+            <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+            <li id="profile" style="display: none;"><a href="#">Profile</a></li>
             <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
             <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
          
@@ -46,8 +47,11 @@
     <option value="htl">high to low</option>
 </select>
 
-
+    <h2 class="count">Total Items Price :- <span class="total"></span></h2>
     <div id="main"></div>
+    <div class="footer">
+
+    </div>
 </body>
 
 
@@ -56,6 +60,10 @@
     let sort=document.getElementById("sort");
         let search=document.getElementById("search");
       let main=document.getElementById("main");
+      let buynow=document.getElementById("buynow");
+   let gdata=JSON.parse(localStorage.getItem("buynow"))|| [];
+
+  
     let lsdata=JSON.parse(localStorage.getItem("sachin"))|| [];
 
     search.addEventListener("input",function (){
@@ -136,9 +144,12 @@ display(lsdata)
         let span=document.createElement("span");
         let minus=document.createElement("button");
         let remove=document.createElement("button");
-
+      let divbtn=document.createElement("div");
+      let buynow=document.createElement("button")
+      buynow.id="buynow"
+      divbtn.className="divbtn"
     
-
+buynow.innerText="BUY NOW"
 img.src=el.image;
 tittle.innerText=el.title;
 description.innerText=el.description;
@@ -175,20 +186,38 @@ display(data)
 })
 
 
+    buynow.addEventListener("click",function (){
+        gdata.push(el)
+   localStorage.setItem("buynow",JSON.stringify(gdata))
+    
+   
+   window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day5/payment.html"
+ })
+
+
 
      main.append(div);
-     div.append(img,tittle,description,price,category,add,span,minus,remove);
+     divbtn.append(add,span,minus,remove)
+     div.append(img,tittle,description,price,category,divbtn,buynow);
     
    
 
      
     });
 
+    let total=document.querySelector(".total");
+    sum=0
+    for(i=0;i<data.length;i++){
+     sum=sum+data[i].price;
+    }
+    total.innerText=`$${sum}`
+
  
   }
 
-  
 
+
+  
 
 
 </script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    
+    <div class="menu_bar">
+        
+        <a href="" class="logodec"> <h1 class="logo">
+            <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
+        
+         <ul>
+            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
+            
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Boy's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Men's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Women's wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Beauty</a></li>
+                </ul>
+            </div>
+            
+            </li>
+            <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
+            <li id="profile" style="display: none;"><a href="#">Profile</a></li>
+            <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
+            <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
+            <li><a href="/foregoing-silver-4856/day4/product.html">Wishlist</a></li>
+         </ul>
+        </div>
+   
+        <div class="container p-0">
+            <div class="card px-4">
+                <p class="h8 py-3">Payment Details</p>
+                <div class="row gx-3">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Person Name</p>
+                            <input class="form-control mb-3" type="text" placeholder="Name" value="Barry Allen">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Card Number</p>
+                            <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Expiry</p>
+                            <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">CVV/CVC</p>
+                            <input class="form-control mb-3 pt-2 " type="password" placeholder="***">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="btn btn-primary mb-3">
+                            <span class="ps-3" id="rs"></span>
+                            <span class="fas fa-arrow-right">Go</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     
+
+</body>
+
+<script>
+let mark=document.querySelector(".fas fa-arrow-right");
+console.log(mark)
+  let rs=document.getElementById("rs");
+ 
+    let gdata=JSON.parse(localStorage.getItem("buynow"))|| [];
+    rs.innerText=`$${gdata[0].price}`;
+    rs.addEventListener("click",function (){
+   alert("proceed to payment");
+    })
+</script>
+</html>
+
+
+

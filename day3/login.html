@@ -11,23 +11,23 @@
    
     <div class="menu_bar">
         
-        <a href="" class="logodec"> <h1 class="logo">
+        <a href="/foregoing-silver-4856/day2/index.html" class="logodec"> <h1 class="logo">
             <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
         
          <ul>
-            <li><a href="">Home  <i class="fas fa-caret-down"></i></a>
+            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
             
             <div class="dropdown_menu">
                 <ul>
-                    <li><a href="">Boy's Wear</a></li>
-                    <li><a href="">Men's Wear</a></li>
-                    <li><a href="">Women's wear</a></li>
-                    <li><a href="">Beauty</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Boy's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Men's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Women's wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Beauty</a></li>
                 </ul>
             </div>
             
             </li>
-            <li><a href="">Log In</a></li>
+           
             <li><a href="">About</a></li>
             <li><a href="">Help</a></li>
          </ul>
@@ -36,22 +36,22 @@
     <div id="form_maker">
         <h2>LOG IN TO YOUR ACCOUNT</h2>
         <hr>
-        <p>Enter your Password and Email</p>
+        <p id="para">Enter your Password and Email</p>
         <hr>
         <form id="register" method="post"> 
           <br>
          <label >Email / Mobile No. :</label>
          <br>
-         <input type="text" name="email" id="name" placeholder="Enter Email or Number">
+         <input type="text"  id="name" placeholder="Enter Email or Number">
          <br><br>
         
          <label >Password :</label>
          <br>
-         <input type="text" name="text" id="Password" placeholder="Enter Your Password">
+         <input type="password" id="Password" placeholder="Enter Your Password">
          <br><br>
         
         
-         <input type="submit" id="submit">
+        <button id="submit">Submit</button>
        <hr>
         
         </form>
@@ -65,7 +65,58 @@
    
 </body>
 <script>
+  
+  
+   let para=document.getElementById("para");
+   let form=document.getElementById("register");
+  
+   let submit=document.getElementById("submit")
+
+   let data=JSON.parse(localStorage.getItem("signupinfo")) || [];
+  console.log(data)
+   form.addEventListener("submit",function (e){
+    e.preventDefault();
+  
+    let name=document.getElementById("name");
+   let password=document.getElementById("Password");
+   let ram=name.value
+   let shyam=password.value
+   console.log(ram,shyam)
    
+  let flag=false;
+   for(let i=0;i<data.length;i++){
+    if(data[i].email==ram && data[i].password==shyam){
+        flag=true
+    }
+   }
+
+
+   if(flag==true){
+    
+    setTimeout(() => {
+        alert("Logged in successfully" )
+        password.value=""
+       name.value=""
+       window.location.href = "http://127.0.0.1:5500/foregoing-silver-4856/day4/cart.html"
+    }, 1000);
+   }
+   else{
+    para.style.color="red"
+    para.innerText="Invalid email and password"
+    setTimeout(() => {
+        para.style.color="rgb(14, 0, 105)"
+        para.innerText="Enter your Password and Email"
+       password.value=""
+       name.value=""
+    }, 4000);
+
+   }
+
+   })
+ 
+
+   
+
 
 </script>
 </html>
