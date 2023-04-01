@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Adamina&display=swap" rel="stylesheet">
+
+    <style>
+        #mid{
+          
+            text-align: center;
+            font-family: 'Adamina', serif;
+        }
+        #submit,#Capcha,#otp{
+        padding: 5px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mid">
+    <h1>OTP Verification</h1>
+    <p>Wait for the OTP</p>
+    <hr>
+    <label>Enter Your OTP</label>
+    <br><br>
+  
+    <input type="text" placeholder="Enter Your OTP Here" id="otp">
+
+    <br><br>
+    <label >Enter Capcha Code:</label>   
+   
+   <span>($ H U % 7)</span>
+  <br><br>
+   <input type="text" placeholder="Enter Capcha code" id="Capcha">
+   <button id="submit"> Submit</button>
+</div>
+</body>
+
+<script>
+  
+  let submit=document.getElementById("submit")
+  function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+ 
+ 
+  alert( "your otp is="+ Math.floor(Math.random() * (max - min + 1) + min)); // The maximum is inclusive and the minimum is inclusive
+
+  submit.addEventListener("click",function (){
+    let otp=document.getElementById("otp")
+  if( Math.floor(Math.random() * (max - min + 1) + min)==+otp.value){
+   
+  }
+  else{
+    alert("YOUR ORDER IS PLACED THANKS FOR USING SHOP ON")
+  window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day4/cart.html"
+
+  }
+  })
+
+
+
+}
+getRandomIntInclusive(1000,9999)
+
+   
+</script>
+
+</html>

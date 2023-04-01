@@ -12,7 +12,8 @@
 }
 body{
     font-family: sans-serif;
-padding-top: 80px;
+padding-top: 110px;
+background-color: #f4f4f5;
 }
 
 #filtered{
@@ -127,6 +128,8 @@ img{
 #main>div{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     padding: 30px;
+    border-radius: 20px;
+    background-color: white;
 }
 #main>div p,#main>div h2,#main>div h4,#main>div img{
     /* padding: 30px; */
@@ -137,6 +140,15 @@ img{
 #main>div button{
     display: block;
     margin: auto;
+    border-radius: 8px;
+}
+
+.add{
+    padding: 5px;
+    color: #0073ff;
+    background-color: #141d28;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -172,3 +184,4 @@ img{
         height: fit-content;
     }
 }
+

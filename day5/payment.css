@@ -23,8 +23,6 @@ background-color: #f4f4f5;
     border-radius: 20px;
     left: 5%;
      margin-top: 10px;
-     color: red;
-    
 }
  #sort{
     position: fixed;
@@ -33,8 +31,6 @@ background-color: #f4f4f5;
     display: block;
     padding: 10px;
     border-radius: 20px;
-    color: red;
-  
  }
 
 .menu_bar{
@@ -118,98 +114,92 @@ color: var(--color-white);
     border: none;
   }
 
-  #main{
-   
-    width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-     gap: 20px;
-    
-}
-img{
-    width: 100%;
-}
-#main>div{
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 30px;
-   
-}
-#main>div p,#main>div h2,#main>div h4,#main>div img{
-    /* padding: 30px; */
-    text-align: center;
-    padding-bottom: 10px;
- 
-    
-}
-.divbtn{
-    display: flex;
-    justify-content: center;
-    
-}
-#main>div button,#main>div span{
-    margin: 0px 5px;
-    padding: 5px 10px;
-    font-weight: 500;
- border-radius: 8px;
- font-size: 14px;
- background-color: #1a17174a;
-}
-#main>div span{
-    color: var(--color-primary);
-    font-size: 19px;
-    font-weight: bolder;
-}
-#main>div >button{
-    color: #ffffff;
-    background-color: #000000;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-}
-.count{
-    text-align: center;
-    margin-bottom: 10px;
-color: #0073ff;
-}
-.total{
-    color: red;
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-@media only screen and (max-width: 1000px) {
-    #main{
-        
-      width: 40%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-         gap: 20px;
-    }
-    #sort{
-        position: fixed;
-      right: 0%;
-     
-        margin-top: 250px;
-        width: fit-content;
-        padding: 10px;
-        border-radius: 20px;
-     }
-     
-#filtered{
-    position: fixed;
-    display: block;
-    padding: 10px;
-    border-radius: 20px;
-    left: 0%;
-     margin-top: 250px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0C4160;
+
+    padding: 30px 10px;
 }
-    .menu_bar{
-        display: flex;
-        flex-wrap: wrap;
-        height: fit-content;
-    }
+
+.card {
+    max-width: 500px;
+    margin: auto;
+    color: black;
+    border-radius: 20 px;
+}
+
+p {
+    margin: 0px;
+}
+
+.container .h8 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.btn.btn-primary {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+    border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+
+}
+
+
+.btn.btn.btn-primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.btn.btn-primary:hover .fas.fa-arrow-right {
+    transform: translate(15px);
+    transition: transform 0.2s ease-in;
+}
+
+.form-control {
+    color: white;
+    background-color: #223C60;
+    border: 2px solid transparent;
+    height: 60px;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.form-control:focus {
+    color: white;
+    background-color: #0C4160;
+    border: 2px solid #2d4dda;
+    box-shadow: none;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+::placeholder {
+    font-size: 14px;
+    font-weight: 600;
 }
