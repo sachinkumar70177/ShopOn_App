@@ -155,7 +155,12 @@ flex-wrap: wrap;
   }
   
  
- 
+  .logout1{
+    display: none;
+}
+.logout{
+    display: block;
+}
  
   
  

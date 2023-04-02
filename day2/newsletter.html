@@ -13,7 +13,7 @@
 <body>
  <div class="menu_bar">
         
-    <a href="/foregoing-silver-4856/day2/index.html" class="logodec"> <h1 class="logo">
+    <a href="/foregoing-silver-4856/day4/cart.html" class="logodec"> <h1 class="logo">
         <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
     
      <ul>
@@ -30,9 +30,13 @@
         
         </li>
        
-        <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
-       
-        <li id="profile" style="display: none;"><a href="#">Profile</a></li>
+      
+        <li id="login" class="login"><a href="/foregoing-silver-4856/day3/login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
+
+
+        <li  id="logout"><a href="/foregoing-silver-4856/day2/newsletter.html">logout</a></li>
+
+
        
         <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
        
@@ -68,6 +72,29 @@
           </footer>
 </body>
 <script>
+   
+   
      
+   let logout=document.querySelector("#logout")
+let login=document.querySelector("#login>a")
+console.log(login)
+      
+if((localStorage.getItem("name"))==undefined){
+    logout.classList.add("logout1")
+    login.innerText="Log In"
+   
+}
+else{
+
+    login.innerText=localStorage.getItem("name")
+    
+   logout.classList.add("logout")
+}
+
+logout.addEventListener("click",function (){
+    logout.classList.add("logout1")
+    localStorage.removeItem("name")
+})
+
 </script>
 </html>

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -47,11 +50,12 @@
         
          <label >Password :</label>
          <br>
-         <input type="password" id="Password" placeholder="Enter Your Password">
+         <input type="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required=""   id="Password">
+         <i class="far fa-eye" id="togglePassword" style=" cursor: pointer;"></i>
          <br><br>
         
         
-        <button id="submit">Submit</button>
+        <input type="submit" id="submit">
        <hr>
         
         </form>
@@ -79,28 +83,31 @@
   
     let name=document.getElementById("name");
    let password=document.getElementById("Password");
-   let ram=name.value
-   let shyam=password.value
-   console.log(ram,shyam)
-   
-  let flag=false;
-   for(let i=0;i<data.length;i++){
-    if(data[i].email==ram && data[i].password==shyam){
-        flag=true
-    }
-   }
-
-
-   if(flag==true){
-    
-    setTimeout(() => {
+ 
+   if(data.some((value)=>{ return value.email==name.value && value.password==password.value}))
+    {
+       
+       
         alert("Logged in successfully" )
-        password.value=""
-       name.value=""
+     
+     let current_user=data.filter((v)=>{return v.email==name.value && v.password==password.value})[0]
+     console.log(current_user.fname)
+    
+     localStorage.setItem("name",current_user.fname);
+   
+
+     
+   
+
        window.location.href = "http://127.0.0.1:5500/foregoing-silver-4856/day4/cart.html"
-    }, 1000);
-   }
-   else{
+    
+       
+    }
+    else{
+    
+   
+   
+   
     para.style.color="red"
     para.innerText="Invalid email and password"
     setTimeout(() => {
@@ -115,7 +122,16 @@
    })
  
 
-   
+   const togglePassword = document.querySelector('#togglePassword');
+ 
+   const password=document.getElementById("Password")
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
 
 
 </script>

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
     <link rel="stylesheet" href="signup.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -12,26 +15,26 @@
    
     <div class="menu_bar">
         
-        <a href="" class="logodec"> <h1 class="logo">
+        <a href="/foregoing-silver-4856/day4/cart.html" class="logodec"> <h1 class="logo">
             <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
         
          <ul>
-            <li><a href="">Home  <i class="fas fa-caret-down"></i></a>
+            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
             
             <div class="dropdown_menu">
                 <ul>
-                    <li><a href="">Boy's Wear</a></li>
-                    <li><a href="">Men's Wear</a></li>
-                    <li><a href="">Women's wear</a></li>
-                    <li><a href="">Beauty</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Boy's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Men's Wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Women's wear</a></li>
+                    <li><a href="/foregoing-silver-4856/day4/cart.html">Beauty</a></li>
                 </ul>
             </div>
             
             </li>
             <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
             <li id="profile" style="display: none;"><a href="#">Profile</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Help</a></li>
+            <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
+            <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
          </ul>
         </div>
    
@@ -71,13 +74,19 @@
     
      <label  >Password : <span id="check"></span></label>
      <br>
-     <input type="text" name="text" id="Password" placeholder="Enter Your Password">
+     <input type="password" name="text" id="Password" placeholder="Enter Your Password">
      <br><br>
      <label >Confirm Password : <span id="checkagain"></span></label>
      <br>
-     <input type="text" name="text" id="Password1" placeholder="Confirm Password">
+    
+
+
+     <input type="password" name="password" placeholder="Confirm Password" autocomplete="current-password" required=""   id="Password1">
+  <i class="far fa-eye" id="togglePassword" style=" cursor: pointer;"></i>
+
+
      <br><br>
-     <input type="submit" id="submit">
+  <input type="submit"  id="submit">
    <hr>
     
     </form>
@@ -89,6 +98,7 @@
    
 </body>
 <script>
+
 let name=document.getElementById("Name");
 let password=document.getElementById("Password")
 let confirmpassword=document.getElementById("Password1");
@@ -99,6 +109,7 @@ let fname=document.getElementById("fname");
 let age=document.getElementById("age");
  
 let data=JSON.parse(localStorage.getItem("signupinfo")) || [];
+
 function display(signupinformation){
     
 
@@ -106,41 +117,66 @@ form.addEventListener("submit",function (e){
    
     
     e.preventDefault();
-  
-    if(password.value==confirmpassword.value){
-       
-       let obj={
-        fname:fname.value,
-        age:age.value,
-        email:name.value,
-        password:password.value,
-       }
-       signupinformation.push(obj);
-        console.log(signupinformation)
-        
-       localStorage.setItem("signupinfo",JSON.stringify(signupinformation));
-       setTimeout(() => {
-        window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day3/login.html"
-       }, 2000);
-      
-     
+    if(signupinformation.some((value)=>{ return value.email==name.value}))
+    {
+        alert("Please Login from diffrent email/number")
     }
     else{
-        checkagain.innerText="Enter same password"
-        setTimeout(() => {
-            checkagain.innerText=""
-        }, 3000);
-     
+
+        if(password.value==confirmpassword.value){
+       
+            let obj={
+             fname:fname.value,
+             age:age.value,
+             email:name.value,
+             password:password.value,
+            }
+            signupinformation.push(obj);
+             console.log(signupinformation)
+             
+            localStorage.setItem("signupinfo",JSON.stringify(signupinformation));
+           
+            setTimeout(() => {
+             window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day3/login.html"
+            }, 2000);
+           
+          
+         }
+         else{
+             checkagain.innerText="Please Enter the same password"
+             setTimeout(() => {
+                 checkagain.innerText=""
+             }, 3000);
+          
+         }
+         console.log(signupinformation)
+
+        
     }
-    console.log(signupinformation)
+
+
+  
+   
 })
 }
 
 
+const togglePassword = document.querySelector('#togglePassword');
+ 
 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = confirmpassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmpassword.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
 
 
 display(data)
+
+
+
 
 
 

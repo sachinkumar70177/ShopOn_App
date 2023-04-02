@@ -203,3 +203,10 @@ p {
     font-size: 14px;
     font-weight: 600;
 }
+
+.logout1{
+    display: none;
+}
+.logout{
+    display: block;
+}
