@@ -11,11 +11,11 @@
 
     <div class="menu_bar">
         
-        <a href="" class="logodec"> <h1 class="logo">
+        <a href="./cart.html" class="logodec"> <h1 class="logo">
             <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
          <input type="search" placeholder="SEARCH" id="search">
          <ul>
-            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
+            <li><a href="./index.html">Home  <i class="fas fa-caret-down"></i></a>
             
             <div class="dropdown_menu">
                 <ul>
@@ -28,13 +28,13 @@
             
             </li>
          
-            <li id="login" class="login"><a href="/foregoing-silver-4856/day3/login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
+            <li id="login" class="login"><a href="./login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
 
 
-            <li  id="logout"><a href="/foregoing-silver-4856/day4/cart.html">logout</a></li>
+            <li  id="logout"><a href="./product.html">logout</a></li>
            
-            <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
-            <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
+            <li><a href="./newsletter.html">About</a></li>
+            <li><a href="./help.html">Help</a></li>
          
          </ul>
         </div>
@@ -224,7 +224,7 @@ display(data)
 else{
 
     login.innerText=localStorage.getItem("name")
-    window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day5/payment.html"
+    window.location.href="payment.html"
   
 }
    
@@ -245,7 +245,7 @@ else{
     let total=document.querySelector(".total");
     sum=0
     for(i=0;i<data.length;i++){
-     sum=sum+data[i].price;
+     sum=sum+data[i].price*data[i].quantity;
     }
     total.innerText=`$${sum}`
 

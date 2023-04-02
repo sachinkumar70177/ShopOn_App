@@ -12,31 +12,31 @@
     
     <div class="menu_bar">
         
-        <a href="" class="logodec"> <h1 class="logo">
+        <a href="./cart.html" class="logodec"> <h1 class="logo">
             <p class="p">Come <span> On</span></p>SHOP <span>ON</span></h1> </a>
         
          <ul>
-            <li><a href="/foregoing-silver-4856/day2/index.html">Home  <i class="fas fa-caret-down"></i></a>
+            <li><a href="./index.html">Home  <i class="fas fa-caret-down"></i></a>
             
             <div class="dropdown_menu">
                 <ul>
-                    <li><a href="/foregoing-silver-4856/day4/cart.html">Boy's Wear</a></li>
-                    <li><a href="/foregoing-silver-4856/day4/cart.html">Men's Wear</a></li>
-                    <li><a href="/foregoing-silver-4856/day4/cart.html">Women's wear</a></li>
-                    <li><a href="/foregoing-silver-4856/day4/cart.html">Beauty</a></li>
+                    <li><a href="./cart.html">Boy's Wear</a></li>
+                    <li><a href="./cart.html">Men's Wear</a></li>
+                    <li><a href="./cart.html">Women's wear</a></li>
+                    <li><a href="./cart.html">Beauty</a></li>
                 </ul>
             </div>
             
             </li>
 
-            <li id="login" class="login"><a href="/foregoing-silver-4856/day3/login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
+            <li id="login" class="login"><a href="./login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
 
 
-            <li  id="logout"><a href="/foregoing-silver-4856/day5/payment.html">logout</a></li>
+            <li  id="logout"><a href="./payment.html">logout</a></li>
 
-            <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
-            <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
-            <li><a href="/foregoing-silver-4856/day4/product.html">Wishlist</a></li>
+            <li><a href="./newsletter.html">About</a></li>
+            <li><a href="./help.html">Help</a></li>
+            <li><a href="./product.html">Wishlist</a></li>
          </ul>
         </div>
    
@@ -84,7 +84,7 @@
 
 <script>
 let mark=document.querySelector(".fas fa-arrow-right");
-console.log(mark)
+
   let rs=document.getElementById("rs");
  
     let gdata=JSON.parse(localStorage.getItem("buynow"))|| [];
@@ -94,7 +94,7 @@ console.log(mark)
        gdata.splice(0,1)
        localStorage.setItem("buynow",JSON.stringify(gdata))
    alert("proceed to payment");
-   window.location.href="http://127.0.0.1:5500/foregoing-silver-4856/day5/otp.html"
+   window.location.href="otp.html"
     })
 
 
@@ -110,6 +110,7 @@ if((localStorage.getItem("name"))==undefined){
     login.innerText="Log In"
    
 }
+
 else{
 
     login.innerText=localStorage.getItem("name")
