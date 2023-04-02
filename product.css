@@ -239,10 +239,10 @@ flex-wrap: wrap;
     
   }
   #footer{
-position: relative;
- top: 30%;
+
     width: 80%;
     margin: auto;
+    text-align: center;
   }
   .social p{
     font-family: 'Courier New', Courier, monospace;
