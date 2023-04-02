@@ -28,8 +28,16 @@
             </div>
             
             </li>
-            <li id="login"><a href="/foregoing-silver-4856/day3/login.html">Log In</a></li>
-            <li id="profile" style="display: none;"><a href="#">Profile</a></li>
+
+
+
+
+            <li id="login" class="login"><a href="/foregoing-silver-4856/day3/login.html"><script>document.write(localStorage.getItem("name"));</script></a></li>
+
+
+            <li  id="logout"><a href="/foregoing-silver-4856/day4/cart.html">logout</a></li>
+
+
             <li><a href="/foregoing-silver-4856/day2/newsletter.html">About</a></li>
             <li><a href="/foregoing-silver-4856/day3/help.html">Help</a></li>
             <li><a href="./product.html">Wishlist</a></li>
@@ -51,6 +59,32 @@
       
 
             <div id="main"></div>
+
+
+
+            <footer id="footer">
+                <h4 class="news"><a href="./newsletter.html"> Click On <br> <i style="color: rgb(242, 21, 21);">  JOIN OUR NEWSLETTER</i> <br> To Join NEWSLETTER</a></h>
+                <hr>
+                <h4>Social </h4>
+                <div class="social">
+                    <span> <a href="https://www.instagram.com/zara/" target="_blank">INSTAGRAM</a></span>
+                    <span> <a href="https://www.facebook.com/Zara" target="_blank">FACEBOOK</a></span>
+                    <span> <a href="https://twitter.com/ZARA" target="_blank">TWITTER</a></span>
+                    <span> <a href="https://www.pinterest.es/zaraofficial/" target="_blank">PINTEREST</a></span>
+                    <span> <a href="https://www.youtube.com/user/zara" target="_blank">YOUTUBE</a></span>
+                    <span> <a href="https://open.spotify.com/user/r6ivwuv0ebk346hhxo446pbfv" target="_blank">SPOTIFY</a></span>
+                </div>
+                <hr>
+                <h4>Company</h4>
+                <p class="name">
+                    Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.
+                    
+                    The customer is at the heart of our unique business model, which includes design, production, distribution and sales through our extensive retail network.
+                    
+                    For more information, please visit the Inditex Group website: www.inditex.com</p>
+                    <hr>
+                <p class="name">NAME AND ADDRESS OF THE MANUFACTURER: INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.) AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+                </footer>
 
 </body>
 <script>
@@ -207,6 +241,32 @@ add.addEventListener("click",function (){
       }
       return false;
      }
+
+
+
+let logout=document.querySelector("#logout")
+let login=document.querySelector("#login>a")
+console.log(login)
+      
+if((localStorage.getItem("name"))==undefined){
+    logout.classList.add("logout1")
+    login.innerText="Log In"
+   
+}
+else{
+
+    login.innerText=localStorage.getItem("name")
+    
+   logout.classList.add("logout")
+}
+
+logout.addEventListener("click",function (){
+    logout.classList.add("logout1")
+    localStorage.removeItem("name")
+})
+
+
+     
   
 </script>
 </html>

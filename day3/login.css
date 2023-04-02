@@ -96,7 +96,7 @@ color: var(--color-black);
     border: none;
   }
   #form_maker{
-    width: 30%;
+    width: 40%;
 
  display: flex;
  justify-content: center;
@@ -118,7 +118,7 @@ color: var(--color-black);
     font-weight: 900;
 }
 #submit{
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
     background-color: #a7cfff;
     font-weight: 700;
@@ -150,6 +150,19 @@ text-align: center;
     background-color: #e1e1e1;
     font-weight: 700;
 }
+#togglePassword{
+    position: sticky;
+
+    left: 80%;
+
+}
 #form_maker h2{
 margin-bottom: 20px;
+}
+@media only screen and (max-width : 768px) {
+
+    #form_maker{
+        width: 80%;
+    }
+
 }

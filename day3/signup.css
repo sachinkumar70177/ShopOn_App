@@ -26,6 +26,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
+    margin-top: 10px;
 
 }
 .logo{
@@ -162,8 +163,17 @@ color: var(--color-black);
     background-color: #e1e1e1;
     font-weight: 700;
 }
+
+#togglePassword{
+    position: sticky;
+
+    left: 80%;
+
+}
+
+
 #submit{
-width: 100%;
+width: 90%;
 padding: 8px;
 border-radius: 20px;
 border: none;
@@ -197,6 +207,12 @@ margin: 10px 0px;
    color: red;
    transition: color 4s ease-out;
 }
+@media only screen and (max-width : 768px) {
 
+    #form_maker{
+        width: 60%;
+    }
+
+}
 
 

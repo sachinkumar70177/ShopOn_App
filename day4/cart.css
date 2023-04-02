@@ -15,6 +15,13 @@ body{
 padding-top: 110px;
 background-color: #f4f4f5;
 }
+.logout1{
+    display: none;
+}
+.logout{
+    display: block;
+}
+
 
 #filtered{
     position: fixed;
@@ -184,4 +191,45 @@ img{
         height: fit-content;
     }
 }
+.news a{
+    text-decoration: none;
+    color: black;
+  }
+  .social>span a{
+    display: block;
+  text-decoration: none;
+  color: black;
+  margin: 10px 4px;
+  }
+  .social{
+    width: 30%;
+    margin: auto;
+  display: flex;
+ justify-content: space-evenly;
+flex-wrap: wrap;
+    
+  }
+  #footer{
+    width: 80%;
+    margin: auto;
+  }
+  .social p{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .name{
+    margin: 80px 0px;
+    font-size: 12px;
+   color: rgb(26, 25, 25);
+   width: 40%;
+   font-family: 'Edu NSW ACT Foundation', cursive;
+
+  }
+  .links{
+
+    background-color: rgb(213, 213, 213);
+    border-radius: 20px;
+  }
+  #mid>img{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
 
